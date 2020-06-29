@@ -1,0 +1,56 @@
+%if 0%{?rhel} == 7
+%define python3_vers python36
+%else
+%define python3_vers python3
+%endif
+
+Name:           python-PyKrige
+Version:        1.5.0
+Release:        1%{?dist}
+Summary:   Kriging Toolkit for Python.
+
+License:        BSD 3-Clause
+URL:            https://github.com/GeoStat-Framework/PyKrige
+Source0:        https://files.pythonhosted.org/packages/source/P/PyKrige/PyKrige-%{version}.tar.gz
+
+BuildRequires:  gcc
+BuildRequires:  %{python3_vers}-devel
+BuildRequires:  %{python3_vers}-setuptools
+BuildRequires:  %{python3_vers}-numpy
+BuildRequires:  %{python3_vers}-Cython
+BuildRequires:  %{python3_vers}-matplotlib
+BuildRequires:  %{python3_vers}-scikit-learn
+
+
+%description
+Kriging Toolkit for Python.
+
+%package     -n %{python3_vers}-PyKrige
+Summary:   Kriging Toolkit for Python.
+Requires:  %{python3_vers}-numpy
+Requires:  %{python3_vers}-scipy
+Requires:  %{python3_vers}-matplotlib
+Requires:  %{python3_vers}-scikit-learn
+
+%description -n %{python3_vers}-PyKrige
+Kriging Toolkit for Python.
+
+%prep
+%autosetup -n PyKrige-%{version}
+
+%build
+%py3_build
+
+%install
+%py3_install
+
+%check
+%{__python3} setup.py test
+
+%files -n %{python3_vers}-PyKrige
+%{python3_sitearch}/*
+
+
+%changelog
+* Mon Jun 29 2020 Daniele Branchini <dbranchini@arpae.it> - 1.5.0-1
+- Initial package

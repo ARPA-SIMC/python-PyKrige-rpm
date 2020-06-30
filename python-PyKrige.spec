@@ -19,8 +19,7 @@ BuildRequires:  %{python3_vers}-setuptools
 BuildRequires:  %{python3_vers}-numpy
 BuildRequires:  %{python3_vers}-Cython
 BuildRequires:  %{python3_vers}-matplotlib
-BuildRequires:  %{python3_vers}-scikit-learn
-
+%{!?el8:BuildRequires: %{python3_vers}-scikit-learn}
 
 %description
 Kriging Toolkit for Python.
@@ -30,7 +29,7 @@ Summary:   Kriging Toolkit for Python.
 Requires:  %{python3_vers}-numpy
 Requires:  %{python3_vers}-scipy
 Requires:  %{python3_vers}-matplotlib
-Requires:  %{python3_vers}-scikit-learn
+%{!?el8:Requires: %{python3_vers}-scikit-learn}
 
 %description -n %{python3_vers}-PyKrige
 Kriging Toolkit for Python.
@@ -45,7 +44,8 @@ Kriging Toolkit for Python.
 %py3_install
 
 %check
-%{__python3} setup.py test
+# epel 8 is missing scikit-learn, needed for tests
+%{!?el8:%{__python3} setup.py test}
 
 %files -n %{python3_vers}-PyKrige
 %{python3_sitearch}/*

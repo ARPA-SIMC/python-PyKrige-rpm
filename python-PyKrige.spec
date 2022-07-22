@@ -16,7 +16,7 @@ Source0:        https://files.pythonhosted.org/packages/source/P/PyKrige/PyKrige
 BuildRequires:  gcc
 BuildRequires:  %{python3_vers}-devel
 BuildRequires:  %{python3_vers}-setuptools
-BuildRequires:  %{python3_vers}-numpy
+BuildRequires:  %{python3_vers}-numpy >= 1.14.5
 BuildRequires:  %{python3_vers}-Cython
 BuildRequires:  %{python3_vers}-matplotlib
 %{!?el8:BuildRequires: %{python3_vers}-scikit-learn}
@@ -26,10 +26,6 @@ Kriging Toolkit for Python.
 
 %package     -n %{python3_vers}-PyKrige
 Summary:   Kriging Toolkit for Python.
-Requires:  %{python3_vers}-numpy
-Requires:  %{python3_vers}-scipy
-Requires:  %{python3_vers}-matplotlib
-%{!?el8:Requires: %{python3_vers}-scikit-learn}
 
 %description -n %{python3_vers}-PyKrige
 Kriging Toolkit for Python.

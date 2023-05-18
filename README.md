@@ -1,6 +1,7 @@
-[![Build Status](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/centos8.png)](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/)
-[![Build Status](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/fedora34.png)](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/)
+[![Build Status](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/rocky8.png)](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/)
+[![Build Status](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/rocky9.png)](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/)
 [![Build Status](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/fedora36.png)](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/)
+[![Build Status](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/fedora38.png)](https://simc.arpae.it/moncic-ci/python-PyKrige-rpm/)
 [![Build Status](https://copr.fedorainfracloud.org/coprs/simc/stable/package/python-PyKrige/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/simc/stable/package/python-PyKrige/)
 
 # rpm packaging files for PyKrige

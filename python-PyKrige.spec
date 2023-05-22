@@ -15,9 +15,9 @@ Source0:        https://files.pythonhosted.org/packages/source/P/PyKrige/PyKrige
 
 BuildRequires:  gcc
 BuildRequires:  %{python3_vers}-devel
+BuildRequires:  %{python3_vers}-Cython
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(numpy) >= 1.14.5
-BuildRequires:  python3dist(Cython)
 BuildRequires:  python3dist(matplotlib)
 %{!?el8:BuildRequires: python3dist(scikit-learn)}
 
